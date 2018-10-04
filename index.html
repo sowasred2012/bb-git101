@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Blackbullion</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/blackbullion.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,69 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Our Development Process<br />
+					& Git 101</h2>
+					<img class="plain logo" src="images/blackbullion--full--white.svg" />
+				</section>
+
+				<section>
+					<h2>What we'll be covering:</h2>
+					<ul>
+						<li class="fragment">Overview of the development process</li>
+						<li class="fragment">What git is</li>
+						<li class="fragment">What Codeship is</li>
+						<li class="fragment">Git 101</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>The development process:</h2>
+						<ul>
+							<li class="fragment">Write code locally</li>
+							<li class="fragment">Commit that code</li>
+							<li class="fragment">Push that commit to the git repository</li>
+							<li class="fragment">A build is triggered on Codeship</li>
+							<li class="fragment">Codeship deploys the build to testing.blackbullion.com</li>
+							<li class="fragment">We verify our work in test</li>
+							<li class="fragment">Merge the develop branch into master</li>
+							<li class="fragment">Another build is triggered on Codeship, which deploys the build to production</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Write code locally</h3>
+					</section>
+
+					<section>
+						<h3>Commit that code</h3>
+					</section>
+
+					<section>
+						<h3>Push that commit to the git repository</h3>
+					</section>
+
+					<section>
+						<h3>A build is triggered on Codeship</h3>
+					</section>
+
+					<section>
+						<h3>Codeship deploys the build to testing.blackbullion.com</h3>
+					</section>
+
+					<section>
+						<h3>We verify our work in test</h3>
+					</section>
+
+					<section>
+						<h3>Merge the develop branch into master</h3>
+					</section>
+
+					<section>
+						<h3>Another build is triggered on Codeship, which deploys the build to production</h3>
+					</section>
+				</section>
 			</div>
 		</div>
 
