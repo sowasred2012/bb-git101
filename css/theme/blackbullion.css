@@ -139,7 +139,10 @@ body {
   font-style: italic; }
 
 .reveal pre {
+  background-color: #000;
+  color: #fff;
   display: block;
+  padding: 0 5px;
   position: relative;
   width: 90%;
   margin: 20px auto;
