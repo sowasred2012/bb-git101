@@ -281,3 +281,17 @@ body {
 .reveal .logo {
   min-width: 300px;
 }
+
+body::after {
+  background-image: url('../../images/blackbullion--full--white.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 20px;
+  content: '';
+  display: block;
+  height: 30px;
+  left: 20px;
+  position: fixed;
+  width: 150px;
+}
