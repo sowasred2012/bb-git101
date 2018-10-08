@@ -1,125 +1,167 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Blackbullion</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/blackbullion.css">
+	<title>Blackbullion</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/blackbullion.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Our Development Process<br />
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Our Development Process<br />
 					& Git 101</h2>
-				</section>
+			</section>
 
+			<section>
+				<h2>What we'll be covering:</h2>
+				<ul>
+					<li class="fragment">Overview of the development process</li>
+					<li class="fragment">What git is</li>
+					<li class="fragment">What Codeship is</li>
+					<li class="fragment">Git 101</li>
+				</ul>
+			</section>
+
+			<section>
 				<section>
-					<h2>What we'll be covering:</h2>
+					<h2>The development process:</h2>
 					<ul>
-						<li class="fragment">Overview of the development process</li>
-						<li class="fragment">What git is</li>
-						<li class="fragment">What Codeship is</li>
-						<li class="fragment">Git 101</li>
+						<li class="fragment">Write code locally</li>
+						<li class="fragment">Commit that code</li>
+						<li class="fragment">Push that commit to the git repository</li>
+						<li class="fragment">A build is triggered on Codeship</li>
+						<li class="fragment">Codeship deploys the build to testing.blackbullion.com</li>
+						<li class="fragment">We verify our work in test</li>
+						<li class="fragment">Merge the develop branch into master</li>
+						<li class="fragment">Another build is triggered on Codeship, which deploys the build to production</li>
 					</ul>
 				</section>
 
 				<section>
-					<section>
-						<h2>The development process:</h2>
+					<h3>Write code locally</h3>
+					<img class="plain" src="images/code.png" />
+
+					<aside class="notes">
 						<ul>
-							<li class="fragment">Write code locally</li>
-							<li class="fragment">Commit that code</li>
-							<li class="fragment">Push that commit to the git repository</li>
-							<li class="fragment">A build is triggered on Codeship</li>
-							<li class="fragment">Codeship deploys the build to testing.blackbullion.com</li>
-							<li class="fragment">We verify our work in test</li>
-							<li class="fragment">Merge the develop branch into master</li>
-							<li class="fragment">Another build is triggered on Codeship, which deploys the build to production</li>
+							<li>explain "locally"</li>
+							<li>this is an overview, don't dive too deep into coding practices like TDD</li>
 						</ul>
-					</section>
-
-					<section>
-						<h3>Write code locally</h3>
-						<img class="plain" src="images/code.png" />
-					</section>
-
-					<section>
-						<h3>Commit that code</h3>
-						<pre>git commit -a -m'fix markup on new list block classes'</pre>
-					</section>
-
-					<section>
-						<h3>Push that commit to the git repository</h3>
-						<pre>git push origin develop</pre>
-						<img class="plain" src="images/github-commit.png" />
-					</section>
-
-					<section>
-						<h3>A build is triggered on Codeship</h3>
-						<img class="plain" src="images/codeship.png" />
-					</section>
-
-					<section>
-						<h3>Codeship deploys the build to testing.blackbullion.com</h3>
-						<img class="plain" src="images/testing.png" />
-					</section>
-
-					<section>
-						<h3>We verify our work in test</h3>
-					</section>
-
-					<section>
-						<h3>Merge the develop branch into master</h3>
-						<img class="plain" src="images/github-pr.png" />
-					</section>
-
-					<section>
-						<h3>Another build is triggered on Codeship, which deploys the build to production</h3>
-						<img class="plain" src="images/codeship-master.png" />
-					</section>
+					</aside>
 				</section>
 
 				<section>
-					<h2>What is git?</h2>
+					<h3>Commit that code</h3>
+					<img class="plain" src="images/terminal.png" />
+
+					<aside class="notes">
+						<ul>
+							<li>git is a piece of software which I'll go into in more depth later</li>
+							<li>committing your work is like creating a new file every time you save something on your computer</li>
+							<li>save files are stored in a repository/repo</li>
+							<li>you're able to look at the state of the project at specific points in time</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
-					<h2>What is Codeship?</h2>
+					<h3>Push that commit to the git repository</h3>
+					<pre>git push origin develop</pre>
+					<img class="plain" src="images/github-commit.png" />
+
+					<aside class="notes">
+						<ul>
+							<li>GitHub is a place where git repos can be stored remotely</li>
+							<li>allows teams of developers to all work from the same codebase</li>
+						</ul>
+					</aside>
 				</section>
-			</div>
+
+				<section>
+					<h3>A build is triggered on Codeship</h3>
+					<img class="plain" src="images/codeship.png" />
+
+					<aside class="notes">
+						<ul>
+							<li>When we push our work to GitHub, builds are triggered automatically</li>
+							<li>Codeship is a PaaS, talk more about what it does later</li>
+							<li>It's an automated way of ensuring that the code is in a good enough state for the product to be able to run
+								on
+								a server</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Codeship deploys the build to testing.blackbullion.com</h3>
+					<img class="plain" src="images/testing.png" />
+
+					<aside class="notes">
+						<ul>
+							<li>Automated deploys reduce human error</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>We verify our work in test</h3>
+				</section>
+
+				<section>
+					<h3>Merge the develop branch into master</h3>
+					<img class="plain" src="images/github-pr.png" />
+				</section>
+
+				<section>
+					<h3>Another build is triggered on Codeship, which deploys the build to production</h3>
+					<img class="plain" src="images/codeship-master.png" />
+				</section>
+			</section>
+
+			<section>
+				<h2>What is git?</h2>
+			</section>
+
+			<section>
+				<h2>What is Codeship?</h2>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
